@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"fmt"
-
+；
 	"github.com/blang/semver"
 	"github.com/fatih/color"
 	"github.com/rhysd/go-github-selfupdate/selfupdate"
