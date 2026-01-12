@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Server, BookOpen, ArrowRight, ShoppingBag } from 'lucide-react';
+import { Server, BookOpen, ArrowRight, ShoppingBag, BarChart3 } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -16,7 +16,28 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          {/* 仪表板卡片 */}
+          <Link
+            href="/dashboard"
+            className="group bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <div className="flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-6 group-hover:bg-indigo-200 transition-colors">
+              <BarChart3 className="h-8 w-8 text-indigo-600" />
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              仪表板
+            </h2>
+            <p className="text-gray-600 mb-6">
+              查看平台整体数据统计、订单趋势和活动记录。
+              一目了然地掌握平台运营情况。
+            </p>
+            <div className="flex items-center text-indigo-600 font-medium group-hover:text-indigo-700">
+              <span>查看仪表板</span>
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </div>
+          </Link>
+
           {/* 购物商店卡片 */}
           <Link
             href="/shop"

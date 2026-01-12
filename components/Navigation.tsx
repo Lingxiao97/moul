@@ -2,13 +2,14 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Server, BookOpen, Home, ShoppingBag, Shield } from 'lucide-react';
+import { Server, BookOpen, Home, ShoppingBag, Shield, BarChart3 } from 'lucide-react';
 
 export default function Navigation() {
   const pathname = usePathname();
 
   const navItems = [
     { href: '/', label: '首页', icon: Home },
+    { href: '/dashboard', label: '仪表板', icon: BarChart3 },
     { href: '/shop', label: '购物商店', icon: ShoppingBag },
     { href: '/knowledge', label: '知识库管理', icon: BookOpen },
     { href: '/mcp', label: 'MCP管理', icon: Server },
